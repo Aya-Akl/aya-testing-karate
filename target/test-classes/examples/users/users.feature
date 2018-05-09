@@ -52,32 +52,3 @@ Given path id
 # When method get
 # Then status 200
 # And match response contains user
-
-
-#    Given path 'login'
-#    And form field username = 'john'
-#    And form field password = 'secret'
-#    When method post
-#    Then status 200
-#    And def authToken = response.token
-
-#    * def greeter = function(name){ return 'hello ' + name }
-#    * assert greeter('Bob') == 'hello Bob'
-
-#    # pretty print the response payload
-#    * configure logPrettyResponse = true
-#
-## enable ssl (and no certificate is required)
-#    * configure ssl = true
-#
-## enable ssl and force the algorithm to TLSv1.2
-#    * configure ssl = 'TLSv1.2'
-#
-## time-out if the response is not received within 10 seconds (after the connection is established)
-#    * configure readTimeout = 10000
-#
-## set the uri of the http proxy server to use
-#    * configure proxy = 'http://my.proxy.host:8080'
-#
-## proxy which needs authentication
-#    * configure proxy = { uri: 'http://my.proxy.host:8080', username: 'john', password: 'secret' }
