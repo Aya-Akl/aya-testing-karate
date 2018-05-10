@@ -1,4 +1,5 @@
-Feature: sample karate test script    
+@ignore
+Feature: sample karate test script
     If you are using Eclipse, install the free Cucumber-Eclipse plugin from
     https://cucumber.io/cucumber-eclipse/
     Then you will see syntax-coloring for this file. But best of all,
@@ -7,22 +8,22 @@ Feature: sample karate test script
     go to the Eclipse preferences, find the 'Cucumber User Settings'
     and enter the following Root Package Name: com.intuit.karate    
     Refer to the Cucumber-Eclipse wiki for more: http://bit.ly/2mDaXeV
-
+@ignore
 Background:
 * url 'https://jsonplaceholder.typicode.com'
-
+@ignore
 Scenario: get all users and then get the first user by id
 
 Given path 'users'
 When method get
 Then status 200
-
+@ignore
 * def first = response[0]
-
+@ignore
 Given path 'users', first.id
 When method get
 Then status 200
-
+@ignore
 Scenario: create a user and then get it by id
 
 * def user =
@@ -39,15 +40,15 @@ Scenario: create a user and then get it by id
   }
 }
 """
-
+@ignore
 Given url 'https://jsonplaceholder.typicode.com/users'
 And request user
 When method post
 Then status 201
-
+@ignore
 * def id = response.id
 * print 'created id is: ' + id
-
+@ignore
 Given path id
 # When method get
 # Then status 200
